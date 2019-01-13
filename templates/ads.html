@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title> JOBS</title>
+  
+  
+  
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='new_style.css') }}">
+
+  
+</head>
+
+<body>
+
+  <div class="container">
+  <h1>
+    ADD Job
+  </h1>
+<ul id="target" class="target-items"></ul>
+
+  <form action = "http://localhost:5000/success" method = "post">
+    <label for="newitem">JOB</label>
+    <input type="text" name="job"  >
+	<label for="newitem">Descrption</label>
+    <input type="text" name="des"  >
+    <label for="newitem">Price</label>
+	
+    <input type="text" name="price" >
+	
+	<input type="submit" class="button" value="Register">
+ </form>
+</div>
+
+<div class="output"></div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+
+    <script  src="{{ url_for('static', filename = 'new_js.js') }}"></script>
+
+
+
+</body>
+
+</html>

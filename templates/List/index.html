@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Near By Jobs  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://rsms.me/inter/inter-ui.css?v=3.2'>
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+
+  
+</head>
+
+<body>
+
+
+<div class="wrapper">R
+  <div class="list">
+    <div class="list__header">
+      <h1>Near By Jobs</h1>
+        <h5>Filter Result</h5>
+    </div>
+    <div class="list__body">
+      <table class="list__table">
+        <tr class="list__row" data-image="https://www.formula1.com/content/fom-website/en/Jobss/lewis-hamilton/_jcr_content/image.img.1920.medium.jpg/1533294345447.jpg" data-nationality="British" data-dob="1985-01-07" data-country="gb">
+          <td class="list__cell"><span class="list__value">1</span></td>
+          <td class="list__cell"><span class="list__value">Rahul Sharma</span><small class="list__label">Jobs</small></td>
+          <td class="list__cell"><span class="list__value">Floor Cleaning</span><small class="list__label">Cleaning the floor of the entire house</small></td>
+          <td class="list__cell"><span class="list__value">Rs. 100</span><small class="list__label">Price</small></td>
+        </tr>
+        <tr class="list__row" data-image="https://www.formula1.com/content/fom-website/en/Jobss/sebastian-vettel/_jcr_content/image.img.1920.medium.jpg/1533294389985.jpg" data-nationality="German" data-dob="1987-07-03" data-country="de">
+          <td class="list__cell"><span class="list__value">2</span></td>
+          <td class="list__cell"><span class="list__value">Vinay Gupta</span><small class="list__label">Jobs</small></td>
+          <td class="list__cell"><span class="list__value">ITR filing</span><small class="list__label">Filling ITR and uploading proof of investment</small></td>
+          <td class="list__cell"><span class="list__value">Rs. 150</span><small class="list__label">Price</small></td>
+        </tr>
+        <tr class="list__row" data-image="https://www.formula1.com/content/fom-website/en/Jobss/valtteri-bottas/_jcr_content/image.img.1920.medium.jpg/1536135115661.jpg" data-nationality="Finnish" data-dob="1989-08-28" data-country="fi">
+          <td class="list__cell"><span class="list__value">3</span></td>
+          <td class="list__cell"><span class="list__value">Driver needed to prevent drunk driving</span><small class="list__label">Jobs</small></td>
+          <td class="list__cell"><span class="list__value">Mercedes</span><small class="list__label">Need to drop the client safely at his home by driving in client's car</small></td>
+          <td class="list__cell"><span class="list__value">Rs 100</span><small class="list__label">Price</small></td>
+        </tr>
+        {% for item in data %}
+           <tr class="list__row" data-image="https://www.formula1.com/content/fom-website/en/Jobss/valtteri-bottas/_jcr_content/image.img.1920.medium.jpg/1536135115661.jpg" data-nationality="Finnish" data-dob="1989-08-28" data-country="fi">
+          <td class="list__cell"><span class="list__value">3</span></td>
+          <td class="list__cell"><span class="list__value">{{item[0]}}</span><small class="list__label">Jobs</small></td>
+          <td class="list__cell"><span class="list__value">{{item[1]}}</span><small class="list__label">Need to drop the client safely at his home by driving in client's car</small></td>
+          <td class="list__cell"><span class="list__value">Rs {{item[2]}}</span><small class="list__label">Price</small></td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+<div class="overlay"></div>
+<div class="sidebar">
+  <div class="sidebar__header">
+    <div class="sidebar__title">Nearby Jobs</div>
+    <button class="button button--close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="15" y1="9" x2="9" y2="15"></line>
+        <line x1="9" y1="9" x2="15" y2="15"></line>
+      </svg>
+    </button>
+  </div>
+  <div class="sidebar__body"></div>
+</div>
+  
+  
+
+    <script  src="{{ url_for('static', filename = 'index.js') }}"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+.main-container{
+  height: 100vh;
+  background: rgb(87, 115, 158);
+}
+
+.container{
+  background: #F5F9FD;
+  box-shadow: 0px 4px 30px -5px rgba(0,0,0,0.75);
+}
+
+.signature{
+  color: #61988E;
+  font-family: @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+  padding-top: 15px;
+}
+
+.signature__name{
+  transition: .5s;
+  color: #61988E;
+  text-decoration: none;
+}
+
+.signature__name:hover{
+  color: #1E6583;
+  text-decoration: underline;
+  transition: .5s;
+}
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  animation: pulse-animation .5s alternate infinite;
+  fill: #BA2632;
+}
+
+@keyframes pulse-animation{
+  100%{transform: scale(1.2);}
+}

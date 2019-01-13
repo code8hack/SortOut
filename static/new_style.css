@@ -1,0 +1,86 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.container{
+  background-color:#af66ff;
+  padding:1em 0;
+  max-width:500px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:7px;
+  box-shadow: -8px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 2em;
+    padding:0 0.5em;
+    margin-top:0;
+    color:#fff;
+}
+
+.target-items {
+    padding: 0 1em;
+    margin-top: 0;
+}
+
+.target-items li {
+    position: relative;
+    padding: 1em 0.5em;
+        background-color: rgba(255, 255, 255, 0.1);
+    list-style: none;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.3);
+    color:#fff;
+}
+
+
+.target-items li:last-of-type{
+  border-bottom:0;
+}
+
+span.remove {
+    position: absolute;
+    right: 1em;
+    cursor:pointer;
+}
+
+
+form {
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1em;
+}
+
+form label {
+    min-width: 100%;
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+}
+
+form input, form button {
+    font-family: 'Quicksand', sans-serif;
+    height: 3rem;
+}
+
+form input {
+    flex-grow: 1;
+    border: none;
+    background: #f7f1f1;
+    padding: 0 1.5em;
+    font-size: initial;
+}
+
+form button {
+    padding: 0 1.3rem;
+    border: none;
+    background: #FF6666;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,.3);
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background .2s ease-out;
+}
